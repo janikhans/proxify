@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Janik Knittle']
   spec.email         = ['janik.knittle@gmail.com']
 
-  spec.summary       = 'Free proxies from Free Proxy List'
+  spec.summary       = 'Simple proxies from Free Proxy List'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -34,6 +34,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+
+  spec.add_dependency 'nokogiri'
 
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'rake', '~> 10.0'
