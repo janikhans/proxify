@@ -3,31 +3,31 @@
 For those times when you all you need is a quick list of proxies. Proxies come
 from [Free Proxy List](https://free-proxy-list.net/).
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'proxify'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install proxify
-
 ## Usage
 
-TODO
+Choose your provider (all come from free-proxy-list.net)
 
-## Development
+    default = https://free-proxy-list.net/
+    us = https://www.us-proxy.org/
+    uk = https://free-proxy-list.net/uk-proxy.html
+    web = https://free-proxy-list.net/web-proxy.html
+    anonymous = https://free-proxy-list.net/anonymous-proxy.html
+    google = http://www.google-proxy.net/
+    socks = https://www.socks-proxy.net/
+    ssl = https://www.sslproxies.org/
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Instantiate a new `Proxify` object with your desired provider
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+    $ list = Proxify::List.new(provider: :default)
+
+Proxies are available by calling the proxies method
+
+    $ list.proxies
+
+There are convenience methods to filter proxies by type
+
+    $ list.elite_proxies
+    $ list.anonymous_proxies
 
 ## Contributing
 
